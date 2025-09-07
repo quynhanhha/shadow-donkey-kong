@@ -1,9 +1,9 @@
-Shadow Donkey Kong
+# Shadow Donkey Kong
 
 A small Java/Bagel platformer tribute in the Donkey Kong spirit.
 Run, climb, jump, grab a hammer or a blaster, and clear two handcrafted levels under a time limit.
 
-Demo (at a glance)
+# Demo 
 
 Core loop: navigate platforms → dodge barrels/monkeys → use tools → reach the goal within time.
 
@@ -11,7 +11,7 @@ Two levels: start with Enter (Level 1) or 2 (Level 2) from the title screen.
 
 Config-driven: positions, timers, and UI messaging live in res/*.properties.
 
-Tech Stack
+# Tech Stack
 
 Java 17
 Maven (build + run)
@@ -19,7 +19,7 @@ Bagel 1.9.3 (graphics/game loop)
 LWJGL (native bindings pulled by Maven)
 Assets/Config: res/ (PNG sprites, app.properties, message.properties)
 
-Getting Started
+# Getting Started
 
 Prerequisites
 
@@ -28,10 +28,10 @@ Maven 3.8+
 
 Build & Run
 
-# from DonkeyKong_Skeleton/
+from DonkeyKong_Skeleton/
 mvn clean package
 
-# run via exec plugin
+run via exec plugin
 mvn -q -DskipTests exec:java
 
 If you prefer jar execution (and your system resolves natives correctly):
@@ -41,7 +41,7 @@ java -jar target/DonkeyKong-1.0-SNAPSHOT.jar
 
 Note: LWJGL natives are declared in pom.xml. If you see native-loading errors, ensure you're on a supported OS/arch and running with Java 17.
 
-Controls
+# Controls
 
 Global
 ESC — quit game
@@ -81,7 +81,7 @@ Grants a bullet stack; press S to fire in facing direction.
 Scoring & Timer
 Time-bounded runs; score displayed on end screen.
 
-Configuration
+# Configuration
 
 All tunables are in res/app.properties and res/message.properties.
 
@@ -107,7 +107,7 @@ gameEnd.lost, gameEnd.won, gameEnd.continue, gameEnd.score
 
 Tip: tweak positions and counts (e.g., platform.level2.count, platform.level2.1=...) to iterate on layout without recompiling logic.
 
-Project Structure
+# Project Structure
 
 DonkeyKong_Skeleton/
 ├─ pom.xml                      # Maven config (Java 17, exec plugin, Bagel/LWJGL deps)
@@ -130,7 +130,7 @@ DonkeyKong_Skeleton/
    ├─ app.properties
    └─ message.properties
 
-Known Trade-offs / Future Work
+# Known Trade-offs / Future Work
 
 OOP refactor:
 Extract clearer component systems (physics, input, collision, animation); reduce ShadowDonkeyKong god-object responsibilities.
