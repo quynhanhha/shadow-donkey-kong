@@ -107,29 +107,6 @@ gameEnd.lost, gameEnd.won, gameEnd.continue, gameEnd.score
 
 Tip: tweak positions and counts (e.g., platform.level2.count, platform.level2.1=...) to iterate on layout without recompiling logic.
 
-# Project Structure
-
-DonkeyKong_Skeleton/
-├─ pom.xml                      # Maven config (Java 17, exec plugin, Bagel/LWJGL deps)
-├─ src/main/java/game/
-│  ├─ ShadowDonkeyKong.java     # Main class + game states (TITLE/PLAYING/WIN/GAME_OVER)
-│  ├─ IOUtils.java
-│  ├─ core/
-│  │  ├─ Config.java            # Loads app/message properties; central config access
-│  │  └─ GameObject.java        # Base sprite entity (position, image, intersects)
-│  └─ entities/
-│     ├─ Mario.java             # Player (movement, jump, climb, tools, shooting)
-│     ├─ DonkeyKong.java        # Boss
-│     ├─ Platform.java, Ladder.java
-│     ├─ Barrel.java
-│     ├─ Hammer.java
-│     ├─ Blaster.java, Bullet.java
-│     ├─ NormalMonkey.java, IntelligentMonkey.java
-└─ res/
-   ├─ *.png, FSO8BITR.TTF
-   ├─ app.properties
-   └─ message.properties
-
 # Known Trade-offs / Future Work
 
 OOP refactor:
